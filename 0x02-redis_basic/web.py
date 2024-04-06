@@ -29,7 +29,6 @@ def url_access_count(method):
 
         r.incr(key_count)
         r.set(key, html_content, ex=10)
-        r.expire(key, 10)
         return html_content
     return wrapper
 
